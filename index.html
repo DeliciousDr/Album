@@ -20,9 +20,9 @@
 	</style>
 </head>
 <body>
-<h3 style="position: fixed; top: 10px; left: 15px;">
+<h2 style="position: fixed; top: 10px; left: 15px;">
 	谈笑风生，身经百战 <br><br>
-</h3>
+</h2>
 <audio autoplay loop>
 	<source src="http://nb.baidupcs.com/file/2843bd86e3acc7e443b7163a067a7325?bkt=p2-nb-380&fid=3373296175-250528-531329746699476&time=1432124119&sign=FDTAXERLBH-DCb740ccc5511e5e8fedcff06b081203-2jzF3USFj8XP9BQuCN9%2Filiy%2FUI%3D&to=nbb&fm=Nin,B,T,t&newver=1&newfm=1&flow_ver=3&sl=72155215&expires=8h&rt=pr&r=599222294&mlogid=1064442071&vuk=3373296175&vbdid=4060555257&fin=%E8%AE%B8%E5%B5%A9%26%E4%BD%95%E6%9B%BC%E5%A9%B7-%E7%B4%A0%E9%A2%9C.mp3&fn=%E8%AE%B8%E5%B5%A9%26%E4%BD%95%E6%9B%BC%E5%A9%B7-%E7%B4%A0%E9%A2%9C.mp3" type="audio/mpeg">
 </audio>
@@ -49,7 +49,17 @@
 		item.style.zIndex = (1000-n);
 //		        item.style.opacity = 0;			// new item is invisible initially, will be displayed by animate() function
 		item.onclick = function() {jumpTo(n)};			// if an item is clicked, it will move to the first place in the screen
-		item.innerHTML = "<h2 class='title'>Item No. " + n + "</h2><img src='https://github.com/DeliciousDr/deliciousdr.github.com/blob/master/images/" + (n%6 +1) +".jpg' width='800'><h4 class='title'>Text content is put here......................... for Item No." + n + ".</h4>";
+		item.innerHTML = "<h2 class='title'>Item No. " + n + "</h2>
+		<img src='' width='800'>
+		<img src='http://nb.baidupcs.com/file/cb352dabb2a87263161b21ee70cd9236?bkt=p2-nb-380&fid=3373296175-250528-908995085099399&time=1432127095&sign=FDTAXERLBH-DCb740ccc5511e5e8fedcff06b081203-Kmoklj40P7zPzUiRvmuxkAQpsQc%3D&to=nbb&fm=Nin,B,T,t&newver=1&newfm=1&flow_ver=3&sl=79364175&expires=8h&rt=pr&r=200287611&mlogid=43408570&vuk=3373296175&vbdid=3608429711&fin=IMG_20150411_115138.jpg&fn=IMG_20150411_115138.jpg' width='800'>
+		<img src='http://nb.poms.baidupcs.com/file/63f5db854979185073db27f39d18656e?bkt=p2-nb-380&fid=3373296175-250528-33114537841943&time=1432127159&sign=FDTAXERLBH-DCb740ccc5511e5e8fedcff06b081203-LnwSEL6I70OGXrRQW1rNp9n82lw%3D&to=pnbb&fm=Nin,B,T,t&newver=1&newfm=1&flow_ver=3&sl=78446671&expires=8h&rt=pr&r=225510261&mlogid=324815226&vuk=3373296175&vbdid=3608429711&fin=IMG_20150418_080806.jpg&fn=IMG_20150418_080806.jpg' width='800'>
+		<img src='http://nb.baidupcs.com/file/39b7b1020926cb7d5c9b2a2830fe5a13?bkt=p2-nb-380&fid=3373296175-250528-1021496510417263&time=1432127190&sign=FDTAXERLBH-DCb740ccc5511e5e8fedcff06b081203-895UC%2Bd775Kwuxg9lIoevj0kFKc%3D&to=nbb&fm=Nin,B,T,t&newver=1&newfm=1&flow_ver=3&sl=78446671&expires=8h&rt=pr&r=535095271&mlogid=3722958140&vuk=3373296175&vbdid=3608429711&fin=IMG_20150418_090252.jpg&fn=IMG_20150418_090252.jpg' width='800'>
+		<img src='http://nb.baidupcs.com/file/f6f1cdb9e036c31e941298427d965c0d?bkt=p2-nb-380&fid=3373296175-250528-807798801218659&time=1432127212&sign=FDTAXERLBH-DCb740ccc5511e5e8fedcff06b081203-ZwsKVIkSMUi%2F%2BmJff5Q5jxOqzDU%3D&to=nbb&fm=Nin,B,T,t&newver=1&newfm=1&flow_ver=3&sl=78446671&expires=8h&rt=pr&r=116263209&mlogid=2257627416&vuk=3373296175&vbdid=3608429711&fin=IMG_20150418_090303.jpg&fn=IMG_20150418_090303.jpg' width='800'>
+	
+		
+		
+		
+		<h4 class='title'></h4>";
 		page.appendChild(item);
 		max_index ++;
 	}
