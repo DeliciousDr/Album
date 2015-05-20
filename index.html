@@ -23,7 +23,7 @@
 	<body>
 		<h3 style="position: fixed; top: 10px; left: 15px;">
 			Move the items with arrowKeys, mouseScroll, or directClick. <br><br>
-		
+			
 		</h3>
 		
 		<audio autoplay loop>   <!-- use HTML 5 audio tag to put an song here -->
@@ -56,7 +56,7 @@
 		        item.style.borderRadius = '10px';
         		item.style.boxShadow = '5px -5px 3px #888888';
 		        item.onclick = function() {jumpTo(n)};	// if an item is clicked, it will move to the first place in the screen
-        		item.innerHTML = "<h2 class='title'>Item No. " + n + "</h2><img src='http://nb.baidupcs.com/file/cb352dabb2a87263161b21ee70cd9236?bkt=p2-nb-380&fid=3373296175-250528-908995085099399&time=1432127095&sign=FDTAXERLBH-DCb740ccc5511e5e8fedcff06b081203-Kmoklj40P7zPzUiRvmuxkAQpsQc%3D&to=nbb&fm=Nin,B,T,t&newver=1&newfm=1&flow_ver=3&sl=79364175&expires=8h&rt=pr&r=200287611&mlogid=43408570&vuk=3373296175&vbdid=3608429711&fin=IMG_20150411_115138.jpg&fn=IMG_20150411_115138/" + (n%6 +1) +".jpg' width='800'><h4 class='title'>Text content is put here......................... for Item No." + n + ".</h4>";
+        		item.innerHTML = "<h2 class='title'>Item No. " + n + "</h2><img src='http://joecritchley.com/demos/time-machine/images/" + (n%6 +1) +".jpg' width='800'><h4 class='title'>Text content is put here......................... for Item No." + n + ".</h4>";
 		        page.appendChild(item);
 		        max_index ++;
     		}
