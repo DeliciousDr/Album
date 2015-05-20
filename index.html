@@ -43,6 +43,7 @@
 		    var current_index = 1;		// the sequence number of current item
 		    var max_index = 0;			// the sequence number of the last item
 		    var page = document.getElementById('page');	// the DOM element where the items are placed
+
 		    function add(n){	// put a new item
         		if(! data[n]){
 		            data.push(new Item(data[max_index].translate_y+space, data[max_index].translate_z+space, data[max_index].rotate_z+angel));
@@ -82,6 +83,7 @@
         		    next();
 		        }
 		    };
+
 		    function shortCut(event){
         		if(event.wheelDelta > 0){				// mouse wheel rolls forward
 		            next();
@@ -103,25 +105,30 @@
 			} else {
 			    document.addEventListener('DOMMouseScroll', shortCutFF, false);	// firefox
 			}
+
 		    function jumpTo(n){					// keep moving forward to show the n th item
         		for(var i=current_index; i<n; i++){
 		            next();
         		}
 		    }
+
     		function animate(n, y, opacity) {
 		        var new_y = data[n].translate_y + y;
         		var new_z = data[n].translate_z + y;
 		        var new_rz = data[n].rotate_z + angle*y/space;	// calculate new position of n th item
+
         		var elementN = document.getElementById(n);
 			elementN.onclick = function() {jumpTo(n)};	
 			// animate n th item with CSS3 translate3d and rotate3d methods
 		        elementN.style.webkitTransform = 'translateX('+ (-0.3*new_y) + 'px) translateY('+ new_y + 'px) translateZ(' + new_z + 'px) rotateZ(' + new_rz + 'deg)';
         		elementN.style.transform = 'translateX('+ (-0.3*new_y) + 'px) translateY('+ new_y + 'px) translateZ(' + new_z + 'px) rotateZ(' + new_rz + 'deg)';
 		        elementN.style.opacity = opacity;
+
 		        data[n].translate_y = new_y;
 		        data[n].translate_z = new_z;
         		data[n].rotate_z = new_rz;			// save its new position
 		    }
+
 		    function prev() {
         		if(current_index <= 1) return false;
 		        document.getElementById(current_index-1).style.opacity = 1;	// show last item
@@ -136,6 +143,7 @@
         		    animate(n, space, 0);
 		        };
     		};
+
 		    function next() {
         		if(current_index >= data.length || current_index==100) return false;
 		        document.getElementById(current_index).style.opacity = 0;	//hide current item
@@ -143,6 +151,7 @@
 		        if(current_index+pageSize-1>max_index && max_index<100){	// maximum 100 items allowed
 		            add(current_index + pageSize-1);		// load a new item if available
 		        }
+
         		for(var n=1; n<current_index; n++){		// update the positions of previous invisible items
 		            animate(n, -1*space, 0);
         		};
