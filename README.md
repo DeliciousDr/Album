@@ -1,2 +1,2 @@
 # deliciousdr.github.com
-test github pages
+https://deliciousdr.github.io 
