@@ -1,2 +1,2 @@
 # deliciousdr.github.com
-https://deliciousdr.github.io 
+https://deliciousdr.github.io/Album 
